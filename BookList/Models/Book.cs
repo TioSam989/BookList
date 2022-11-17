@@ -12,6 +12,11 @@ namespace BookList.Models
         public string Name { get; set; }
         public string Writer { get; set; }
 
+        public override string ToString()
+        {
+            return this.Name + " from " + this.Writer; 
+        }
+
     }
 
 }

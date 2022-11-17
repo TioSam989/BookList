@@ -11,13 +11,19 @@ namespace BookList.Views
     {
         public HomePage()
         {
-            this.Title = "Select Option";
+            this.Title = "List of Books";
 
             StackLayout stackLayout = new StackLayout();
             Button button = new Button();
             button.Text = "Add book";
             button.Clicked += Button_Clicked;
             stackLayout.Children.Add(button);
+
+            button = new Button();
+            button.Text = "Check List";
+            button.Clicked += Button_Get_Clicked;
+            stackLayout.Children.Add(button);
+
 
             Content = stackLayout;
 
@@ -26,6 +32,11 @@ namespace BookList.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddBook());
+        }
+
+        private async void Button_Get_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GetAllBooksPage());
         }
     }
 }

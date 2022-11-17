@@ -24,17 +24,17 @@ namespace BookList.Views
 
             StackLayout stackLayout = new StackLayout();
 
-            _NameEntry = new Entry
-            {
-                Keyboard = Keyboard.Text,
-                Placeholder = "Book Name"
-            };
+            _NameEntry = new Entry();
+            _NameEntry.Keyboard = Keyboard.Text;
+            _NameEntry.Placeholder = "Book Name";
+            stackLayout.Children.Add(_NameEntry);
 
-            _WriterEntry = new Entry
-            {
-                Keyboard = Keyboard.Text,
-                Placeholder = "Writer"
-            };
+
+            _WriterEntry = new Entry();
+            _WriterEntry.Keyboard = Keyboard.Text;
+            _WriterEntry.Placeholder = "Writer";
+            stackLayout.Children.Add(_WriterEntry);
+
 
             _SaveButton = new Button();
             _SaveButton.Text = "Add";
